@@ -1,0 +1,16 @@
+<div class="card pt-5">
+  <%= form_for(@restaurant) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :category %>
+    <%= f.select :category, (['Chinese', 'Italian', 'Japanese', 'French', 'Belgian'])%>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+    <%= f.submit %>
+  <% end %>
+
+  <%= link_to "Back to list", restaurants_path %>
+
+</div>
